@@ -14,8 +14,9 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button {
+  body, input, select, button {
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
   }
 
   #root {
@@ -29,10 +30,15 @@ export default createGlobalStyle`
     border-radius: 16px;
     box-shadow: 16px 16px 16px rgba(0, 123, 103, 0.08);
     padding: 24px;
+    height: calc(100vh - (16px * 2));
   }
 
   button {
     cursor: pointer;
+  }
+
+  .result-branch-name {
+    margin-top: 32px;
   }
 
 `;
