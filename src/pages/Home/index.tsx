@@ -1,22 +1,37 @@
 import React from 'react';
 
-import logoImg from '../../assets/images/Brand.svg';
+import logoImg from '../../assets/images/logo.svg';
+import ilustration from '../../assets/images/ilustration.svg';
 
-import { Brand, Title, Description } from './styles';
+import {
+  ContainerFlex,
+  FlexItemForm,
+  FlexItemImg,
+  Brand,
+  Title,
+  Description,
+  Image,
+} from './styles';
 
 import Generator from '../../components/Generator';
 
 const Home: React.FC = () => {
   return (
-    <main>
-      <Brand src={logoImg} />
-      <Title>Branch names with git flow structure</Title>
-      <Description>
-        Generate names for your branch from the title very quickly!
-      </Description>
+    <ContainerFlex>
+      <FlexItemForm>
+        <Brand src={logoImg} />
+        <Title>Branch names with git flow structure</Title>
+        <Description>
+          Generate names for your branch from the title very quickly!
+        </Description>
 
-      <Generator />
-    </main>
+        <Generator />
+      </FlexItemForm>
+
+      <FlexItemImg>
+        <Image src={ilustration} />
+      </FlexItemImg>
+    </ContainerFlex>
   );
 };
 

@@ -10,6 +10,10 @@ export const Form = styled.form`
 export const FormGroup = styled.fieldset`
   border: none;
   margin-bottom: 16px;
+
+  &.result-branch-name {
+    margin-top: 32px;
+  }
 `;
 
 export const Label = styled.label`
@@ -50,6 +54,10 @@ export const Input = styled.input`
   height: 40px;
   padding: 8px 10px;
   color: #1b2e35;
+
+  &::placeholder {
+    color: #818c8f;
+  }
 `;
 
 export const InputWithIcon = styled(Input)`
