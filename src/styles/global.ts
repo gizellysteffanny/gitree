@@ -41,6 +41,14 @@ export default createGlobalStyle`
   #root {
     max-width: 1184px;
     margin: 0 auto;
-    padding: 72px;
+    padding: 48px;
+
+    @media only screen and (max-width: 700px) {
+      padding: 24px;
+    }
+
+    @media only screen and (min-width: 1056px) {
+      padding: 72px;
+    }
   }
 `;

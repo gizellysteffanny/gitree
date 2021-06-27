@@ -22,6 +22,10 @@ export const Label = styled.label`
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 4px;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 13px;
+  }
 `;
 
 export const LabelResult = styled(Label)`
