@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import selectIcon from '../../assets/images/icon-select.svg';
 import copyIcon from '../../assets/images/icon-copy.svg';
 
+interface IFeedbackCopy {
+  show: boolean;
+}
+
 export const Form = styled.form`
   margin-top: 32px;
 `;
@@ -73,13 +77,14 @@ export const InputWithIcon = styled(Input)`
   cursor: pointer;
   border-color: #00bea4;
   color: #00bea4;
+  padding-right: 40px;
 `;
 
-export const FeedbackCopy = styled.small`
+export const FeedbackCopy = styled.small<IFeedbackCopy>`
   margin: 0;
   font-size: 12px;
   color: #00bea4;
   font-weight: 500;
-  opacity: 0;
+  opacity: ${(props: IFeedbackCopy) => (props.show === true ? 1 : 0)};
   transition: opacity 1s ease-out;
 `;
