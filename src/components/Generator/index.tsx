@@ -83,8 +83,13 @@ const Generator: React.FC = () => {
       </FormGroup>
 
       <FormGroup className="result-branch-name" onClick={handleCopy}>
-        <LabelResult>your branch name:</LabelResult>
-        <InputWithIcon id="branch-name" readOnly value={branchName} />
+        <LabelResult show={title.length > 0}>your branch name:</LabelResult>
+        <InputWithIcon
+          show={title.length > 0}
+          id="branch-name"
+          readOnly
+          value={branchName}
+        />
         <FeedbackCopy show={copyText}>Copied to clipboard!</FeedbackCopy>
       </FormGroup>
     </Form>

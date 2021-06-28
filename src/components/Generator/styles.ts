@@ -32,8 +32,10 @@ export const Label = styled.label`
   }
 `;
 
-export const LabelResult = styled(Label)`
-  color: #00bea4;
+export const LabelResult = styled(Label)<IFeedbackCopy>`
+  color: ${(props: IFeedbackCopy) =>
+    props.show === true ? '#00bea4' : '#818c8f'};
+  transition: color 200ms ease-out;
 `;
 
 export const Select = styled.select`
@@ -68,16 +70,19 @@ export const Input = styled.input`
   }
 `;
 
-export const InputWithIcon = styled(Input)`
-  background-image: url(${copyIcon});
+export const InputWithIcon = styled(Input)<IFeedbackCopy>`
+  background-image: url(${(props: IFeedbackCopy) =>
+    props.show === true ? copyIcon : 'none'});
   background-size: 14px;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: calc(100% - 16px);
   cursor: pointer;
-  border-color: #00bea4;
+  border-color: ${(props: IFeedbackCopy) =>
+    props.show === true ? '#00bea4' : '#e1e1e1'};
   color: #00bea4;
   padding-right: 40px;
+  transition: border-color 200ms ease-out;
 `;
 
 export const FeedbackCopy = styled.small<IFeedbackCopy>`
